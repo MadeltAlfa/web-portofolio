@@ -23,6 +23,9 @@
             border-bottom: 3px solid black;
             box-shadow: 0 4px 0 black;
         }
+        section {
+            scroll-margin-top: 200px; /* Sesuaikan dengan tinggi header Anda */
+        }
         .container {
             padding-top: 20px;
         }
@@ -136,7 +139,8 @@
         <p class="text-lg text-gray-700 mb-3">Web Developer | Designer | Creator</p>
         <nav class="mb-3">
             <ul class="navlinks flex justify-center space-x-6">
-                <li><a href="#home">About Me</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#portofolio">Portofolio</a></li>
                 <li><a href="#certificates">Certificates</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -144,8 +148,8 @@
         </nav>
     </header>
     
-    <div class="p-10 mt-30">
-    <section id="home" class="container max-w-4xl mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism flex items-center space-x-6">
+    <div class="p-20 mt-30">
+    <section id="about" class="container max-w-4xl mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism flex items-center space-x-6">
         <div class="avatar bg-pale-red">
             <img src="images/main_photo.jpeg" alt="Avatar" />
         </div>
@@ -157,6 +161,31 @@
                 <a href="https://linkedin.com/in/nanda-ramdhan-30271828b"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://www.instagram.com/nannraa__?igsh=MThzb3J2dzY3anFjNg=="><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://github.com/MadeltAlfa"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="container max-w-4xl mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism">
+        <h2 class="text-2xl font-bold">Skills</h2>
+        <div class="grid grid-cols-3 gap-4 mt-4">
+            <div class="card">
+                <a href="https://example.com">
+                    <div class="card-thumbnail">
+                        <img src="images/Ubuntu.png" loading="lazy" alt="Explore NeoBrutalismCSS" />
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Explore NeoBrutalismCSS: A Revolutionary library</strong></p>
+                        <p>Unveil the future of NeoBrutalism with our groundbreaking approach that will transform your life.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <h3>Project 2 - Portfolio website</h3>
+                <p>A personal portfolio showcasing my work.</p>
+            </div>
+            <div class="card">
+                <h3>Project 2 - Portfolio website</h3>
+                <p>A personal portfolio showcasing my work.</p>
             </div>
         </div>
     </section>
