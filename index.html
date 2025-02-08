@@ -90,7 +90,7 @@
         }
         .avatar img {
             width: 350px;
-            height: 120px;
+            height: 150px;
             border-radius: 50%;
             border: 3px solid black;
         }
@@ -128,6 +128,19 @@
             background-color: white;
             box-shadow: 0 -4px 0 black;
         }
+
+        @media (max-width: 768px) {
+            header {
+                height: auto;
+                padding: 1rem 0;
+            }
+            section {
+                scroll-margin-top: 10px;
+            }
+            .container {
+                padding-top: 1rem;
+            }
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
@@ -136,20 +149,20 @@
 <body class="bg-gray-100 p-0">
     <header class="text-center mb-10">
         <h1 class="text-4xl font-bold text-black mb-2">My Portfolio</h1>
-        <p class="text-lg text-gray-700 mb-3">Web Developer | Designer | Creator</p>
+        <p class="text-lg text-gray-700 mb-4">Web Developer | Designer | Creator</p>
         <nav class="mb-3">
             <ul class="navlinks flex justify-center space-x-6">
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#portofolio">Portofolio</a></li>
+                <li><a href="#portofolio">Projects</a></li>
                 <li><a href="#certificates">Certificates</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     
-    <div class="p-20 mt-30">
-    <section id="about" class="container max-w-4xl mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism flex items-center space-x-6">
+    <div class="p-10 mt-30">
+    <section id="about" class="container max-w-5x1 mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism flex items-center space-x-6">
         <div class="avatar bg-pale-red">
             <img src="images/main_photo.jpeg" alt="Avatar" />
         </div>
@@ -165,23 +178,38 @@
         </div>
     </section>
 
-    <section id="skills" class="container max-w-4xl mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism">
+    <section id="skills" class="container max-w-7xl mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism">
         <h2 class="text-2xl font-bold">Skills</h2>
-        <div class="grid grid-cols-3 gap-4 mt-4">
+        <div class="grid grid-cols-4 gap-4 mt-4">
             <div class="card">
-                <a href="https://example.com">
-                    <div class="card-thumbnail">
-                        <img src="images/Ubuntu.png" loading="lazy" alt="Explore NeoBrutalismCSS" />
-                    </div>
-                    <div class="card-content">
-                        <p><strong>Explore NeoBrutalismCSS: A Revolutionary library</strong></p>
-                        <p>Unveil the future of NeoBrutalism with our groundbreaking approach that will transform your life.</p>
-                    </div>
-                </a>
+                <div class="card-thumbnail">
+                    <img src="images/cpp.png" loading="lazy" alt="Explore NeoBrutalismCSS" />
+                </div>
+                <div class="card-content">
+                    <p><strong>C++: Basic</strong></p>
+                    <p>- Fundamental knowledge of C++ programming language</p>
+                </div>
             </div>
             <div class="card">
-                <h3>Project 2 - Portfolio website</h3>
-                <p>A personal portfolio showcasing my work.</p>
+                <div class="card-thumbnail">
+                    <img src="images/linux.png" loading="lazy" alt="Explore NeoBrutalismCSS" />
+                </div>
+                <div class="card-content">
+                    <p><strong>Linux: Basic</strong></p>
+                    <p>- Fundamental knowledge of Linux operating system</p>
+                    <p>- Experience with command line interface</p>
+                    <p>- Remask of Linux Ubuntu</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-thumbnail">
+                    <img src="images/figma.png" loading="lazy" alt="Explore NeoBrutalismCSS" />
+                </div>
+                <div class="card-content">
+                    <p><strong>Figma: Basic</strong></p>
+                    <p>- Fundamental knowledge of Figma software</p>
+                    <p>- Experience with creating user interfaces and prototypes</p>
+                </div>
             </div>
             <div class="card">
                 <h3>Project 2 - Portfolio website</h3>
@@ -190,9 +218,9 @@
         </div>
     </section>
     
-    <section id="portofolio" class="container max-w-4xl mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism">
+    <section id="portofolio" class="container max-w-7xl mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism">
         <h2 class="text-2xl font-bold">Projects</h2>
-        <div class="grid grid-cols-3 gap-4 mt-4">
+        <div class="grid grid-cols-4 gap-4 mt-4">
             <div class="card">
                 <a href="https://example.com">
                     <div class="card-thumbnail">
@@ -217,7 +245,7 @@
         </div>
     </section>
     
-    <section id="certificates" class="container max-w-4xl mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism">
+    <section id="certificates" class="container max-w-7xl mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism">
         <h2 class="text-2xl font-bold">Certificates</h2>
         <div class="grid grid-cols-2 gap-4 mt-4">
             <div class="card">
@@ -240,7 +268,7 @@
         </div>
     </section>
     
-    <section id="contact" class="container max-w-4xl mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism">
+    <section id="contact" class="container max-w-7xl mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism">
         <h2 class="text-2xl font-bold mt-0">Contact</h2>
         <form action="mailto:nannraamdh@gmail.com" method="post" enctype="text/plain" class="mt-2">
             <label class="block text-gray-700">Name:</label>
