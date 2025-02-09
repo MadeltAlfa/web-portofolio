@@ -6,185 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
     <title>Personal Portfolio</title>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            scroll-snap-type: y mandatory;
-        }
-
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            min-height: 10vh;
-            background: white;
-            z-index: 1000;
-            padding: 10px 0;
-            border-bottom: 3px solid black;
-            box-shadow: 0 4px 0 black;
-        }
-
-        section {
-            scroll-margin-top: 160px;
-        }
-
-        .container {
-            padding-top: 20px;
-        }
-
-        .navlinks a {
-            cursor: pointer;
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-            padding: 5px 10px;
-            border: 2px solid black;
-            border-radius: 5px;
-            background-color: #A6FAFF;
-            transition: all 0.3s ease;
-        }
-
-        .navlinks a:hover {
-            background-color: #79F7FF;
-            color: black;
-            box-shadow: 4px 4px 0 black;
-        }
-
-        .header-hidden {
-            transform: translateY(-60%);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .neobrutalism {
-            border: 3px solid black;
-            border-radius: 10px;
-            box-shadow: 8px 8px 0 black;
-            background-color: white;
-        }
-
-        .card {
-            border: 3px solid black;
-            border-radius: 10px;
-            box-shadow: 4px 4px 0 black;
-            background-color: white;
-            padding: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translate(-4px, -4px);
-            box-shadow: 8px 8px 0 black;
-        }
-
-        .card-thumbnail {
-            border: 3px solid black;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .card-thumbnail img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .card-content {
-            padding: 10px;
-        }
-
-        .card-content p {
-            margin: 10px 0;
-        }
-
-        .card-content strong {
-            font-weight: bold;
-        }
-
-        .avatar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 300px;
-            height: 150px;
-            max-width: 100%;
-            border: 3px solid black;
-            border-radius: 50%;
-            padding: 5px;
-            background-color: white;
-            overflow: hidden;
-            aspect-ratio: 1 / 1;
-        }
-
-        .avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-
-        form input,
-        form textarea,
-        form button {
-            border: 3px solid black;
-            border-radius: 5px;
-            padding: 10px;
-            width: 100%;
-            margin-bottom: 10px;
-            background-color: white;
-            transition: all 0.3s ease;
-        }
-
-        form input:focus,
-        form textarea:focus {
-            outline: none;
-            box-shadow: 4px 4px 0 black;
-        }
-
-        form button {
-            background-color: black;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        form button:hover {
-            background-color: white;
-            color: black;
-            box-shadow: 4px 4px 0 black;
-        }
-
-        footer {
-            border-top: 3px solid black;
-            padding: 20px 0;
-            background-color: white;
-            box-shadow: 0 -4px 0 black;
-        }
-
-        @media (max-width: 768px) {
-            header {
-                height: auto;
-                padding: 1rem 0;
-            }
-
-            section {
-                scroll-margin-top: 10px;
-            }
-
-            .container {
-                padding-top: 1rem;
-            }
-
-            .avatar {
-                width: 120px;
-                height: 120px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="static/style/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neobrutalismcss@1.0.0/dist/neobrutalism.min.css">
 </head>
 
@@ -207,21 +32,24 @@
         </div>
     </header>
 
+    <!-- I am a passionate and dedicated undergraduate student at Universitas Wahid
+            Hasyim -->
     <div class="pt-36 md:pt-40 px-4 md:px-10 md:p-10">
 
         <!-- About Section -->
         <section id="about"
-            class="container max-w-5x1 mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism flex items-center space-x-6">
-            <div class="avatar bg-pale-red">
-                <img src="images/main_photo.jpeg" alt="Avatar" />
+            class="max-w-7xl mx-auto bg-white p-4 md:p-8 mt-4 rounded-lg border-4 border-black shadow-[8px_8px_0_0_black] flex flex-col md:flex-row items-center gap-4 md:gap-10">
+            <div
+                class="avatar w-32 h-32 md:w-48 md:h-48 max-w-[8rem] md:max-w-[12rem] rounded-full overflow-hidden border-4 border-black aspect-square mx-auto">
+                <img src="images/main_photo.jpeg" alt="Avatar" class="w-full h-full object-cover" />
             </div>
-            <div>
-                <h2 class="text-2xl font-bold">About Me</h2>
-                <p class="mt-4 text-gray-600">As a dedicated undergraduate student at Universitas Wahid Hasyim, I am
-                    pursuing my Bachelor’s degree in Informatics Engineering. My passion lies in Machine Learning and
-                    Data scientist, where I continuously strive to expand my skills and contribute to meaningful
-                    projects. I possess a strong foundation in Data Analyst</p>
-                <div class="social mt-5 space-x-2">
+            <div class="text-center md:text-left flex flex-col items-center md:items-start">
+                <h2 class="text-xl md:text-2xl font-bold">Nanda Bagus Ramadhani</h2>
+                <p class="mt-2 md:mt-4 text-sm md:text-base text-gray-600">As a dedicated undergraduate student at
+                    Universitas Wahid Hasyim, I am pursuing my Bachelor’s degree in Informatics Engineering. My passion
+                    lies in Machine Learning and Data scientist, where I continuously strive to expand my skills and
+                    contribute to meaningful projects. I possess a strong foundation in Data Analyst</p>
+                <div class="social mt-4 flex justify-center md:justify-start gap-3">
                     <a href="https://www.facebook.com/nanda.b.r.37?mibextid=ZbWKwL"><i
                             class="fa-brands fa-facebook"></i></a>
                     <a href="https://linkedin.com/in/nanda-ramdhan-30271828b"><i class="fa-brands fa-linkedin"></i></a>
@@ -229,24 +57,36 @@
                             class="fa-brands fa-instagram"></i></a>
                     <a href="https://github.com/MadeltAlfa"><i class="fa-brands fa-github"></i></a>
                 </div>
+                <div class="mt-4">
+                    <a href="https://example.com">
+                        <button
+                            class="h-12 border-black border-2 p-2.5 bg-[#A6FAFF] hover:bg-[#79F7FF] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF] rounded-md">
+                            Download CV
+                        </button>
+                    </a>
+                </div>
             </div>
         </section>
 
-        <section id="skills" class="container max-w-7xl mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism">
-            <h2 class="text-2xl font-bold">Skills</h2>
-            <div class="grid grid-cols-4 gap-4 mt-4">
-                <div class="card">
+        <!-- Skills Section -->
+        <section id="skills"
+            class="max-w-7xl mx-auto bg-white p-4 md:p-8 mt-8 rounded-lg border-4 border-black shadow-[8px_8px_0_0_black]">
+            <h2 class="text-xl md:text-2xl font-bold">Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+
+                <div class="card p-3 md:p-4 border-4 border-black rounded-lg shadow-[4px_4px_0_0_black]">
                     <div class="card-thumbnail">
-                        <img src="images/cpp.png" loading="lazy" alt="Explore NeoBrutalismCSS" />
+                        <img src="images/cpp.png" loading="lazy" alt="Explore NeoBrutalismCSS" class="w-full" />
                     </div>
                     <div class="card-content">
                         <p><strong>C++: Basic</strong></p>
                         <p>- Fundamental knowledge of C++ programming language</p>
                     </div>
                 </div>
-                <div class="card">
+
+                <div class="card p-3 md:p-4 border-4 border-black rounded-lg shadow-[4px_4px_0_0_black]">
                     <div class="card-thumbnail">
-                        <img src="images/linux.png" loading="lazy" alt="Explore NeoBrutalismCSS" />
+                        <img src="images/linux.png" loading="lazy" alt="Explore NeoBrutalismCSS" class="w-full" />
                     </div>
                     <div class="card-content">
                         <p><strong>Linux: Basic</strong></p>
@@ -255,9 +95,10 @@
                         <p>- Remask of Linux Ubuntu</p>
                     </div>
                 </div>
-                <div class="card">
+
+                <div class="card p-3 md:p-4 border-4 border-black rounded-lg shadow-[4px_4px_0_0_black]">
                     <div class="card-thumbnail">
-                        <img src="images/figma.png" loading="lazy" alt="Explore NeoBrutalismCSS" />
+                        <img src="images/figma.png" loading="lazy" alt="Explore NeoBrutalismCSS" class="w-full" />
                     </div>
                     <div class="card-content">
                         <p><strong>Figma: Basic</strong></p>
@@ -265,65 +106,77 @@
                         <p>- Experience with creating user interfaces and prototypes</p>
                     </div>
                 </div>
-                <div class="card">
-                    <h3>Project 2 - Portfolio website</h3>
-                    <p>A personal portfolio showcasing my work.</p>
-                </div>
+
             </div>
         </section>
 
-        <section id="projects" class="container max-w-7xl mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism">
-            <h2 class="text-2xl font-bold">Projects</h2>
-            <div class="grid grid-cols-4 gap-4 mt-4">
-                <div class="card">
+        <!-- Projects Section -->
+        <section id="projects"
+            class="max-w-7xl mx-auto bg-white p-4 md:p-8 mt-8 rounded-lg border-4 border-black shadow-[8px_8px_0_0_black]">
+            <h2 class="text-xl md:text-2xl font-bold">Projects</h2>
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+
+                <div class="card p-3 md:p-4 border-4 border-black rounded-lg shadow-[4px_4px_0_0_black]">
                     <a href="https://example.com">
                         <div class="card-thumbnail">
-                            <img src="images/Ubuntu.png" loading="lazy" alt="Explore NeoBrutalismCSS" />
+                            <img src="images/Ubuntu.png" loading="lazy" alt="Explore NeoBrutalismCSS" class="w-full" />
                         </div>
                         <div class="card-content">
                             <div class="text-small">October 8, 2023</div>
-                            <p><strong>Explore NeoBrutalismCSS: A Revolutionary library</strong></p>
-                            <p>Unveil the future of NeoBrutalism with our groundbreaking approach that will transform
-                                your life.</p>
+                            <p><strong>Ubuntu</strong></p>
+                            <p>Remask of Linux Ubuntu</p>
+                            <button
+                                class="h-12 border-black border-2 p-2.5 bg-[#A6FAFF] hover:bg-[#79F7FF] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF] rounded-md">
+                                Visit
+                            </button>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card p-3 md:p-4 border-4 border-black rounded-lg shadow-[4px_4px_0_0_black]">
+                    <a href="https://example.com">
+                        <div class="card-thumbnail">
+                            <img src="images/java.png" loading="lazy" alt="Explore NeoBrutalismCSS" class="w-full" />
+                        </div>
+                        <div class="card-content">
+                            <div class="text-small">----, 2024</div>
+                            <p><strong>Java</strong></p>
+                            <p>Developed a Java Pharmacy System Application</p>
+                            <button
+                                class="h-12 border-black border-2 p-2.5 bg-[#A6FAFF] hover:bg-[#79F7FF] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF] rounded-md">
+                                Visit
+                            </button>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section id="certificates"
+            class="max-w-7xl mx-auto bg-white p-4 md:p-8 mt-8 rounded-lg border-4 border-black shadow-[8px_8px_0_0_black]">
+            <h2 class="text-xl md:text-2xl font-bold">Certificates</h2>
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+
+                <div class="card">
+                    <a href="static/page/certificates.html">
+                        <div class="card-thumbnail">
+                            <img src="images/alibabacloud.jpg" loading="lazy" alt="Explore NeoBrutalismCSS"
+                                class="w-full" />
+                        </div>
+                        <div class="card-content">
+                            <div class="text-small">October 8, 2023</div>
+                            <p><strong>Alibaba Cloud</p>
                             <p><strong>Learn More -></strong></p>
                         </div>
                     </a>
                 </div>
-                <div class="card">
-                    <h3>Project 2 - Portfolio website</h3>
-                    <p>A personal portfolio showcasing my work.</p>
-                </div>
-                <div class="card">
-                    <h3>Project 2 - Portfolio website</h3>
-                    <p>A personal portfolio showcasing my work.</p>
-                </div>
+
             </div>
         </section>
 
-        <section id="certificates" class="container max-w-7xl mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism">
-            <h2 class="text-2xl font-bold">Certificates</h2>
-            <div class="grid grid-cols-2 gap-4 mt-4">
-                <div class="card">
-                    <a href="https://example.com">
-                        <div class="card-thumbnail">
-                            <img src="images/alibabacloud.jpg" loading="lazy" alt="Explore NeoBrutalismCSS" />
-                        </div>
-                        <div class="card-content">
-                            <div class="text-small">October 8, 2023</div>
-                            <p><strong>Explore NeoBrutalismCSS: A Revolutionary library</strong></p>
-                            <p>Unveil the future of NeoBrutalism with our groundbreaking approach that will transform
-                                your life.</p>
-                            <p><strong>Learn More -></strong></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="card">
-                    <h3>Certificate 2</h3>
-                    <p>Details about the second certificate.</p>
-                </div>
-            </div>
-        </section>
-
+        <!-- Contact Section -->
         <section id="contact" class="container max-w-7xl mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism">
             <h2 class="text-2xl font-bold mt-0">Contact</h2>
             <form action="mailto:nannraamdh@gmail.com" method="post" enctype="text/plain" class="mt-2">
@@ -339,9 +192,30 @@
 
     </div>
 
-    <footer class="text-center mt-10 text-gray-700">
-        <p>&copy; 2025 My Portfolio. All Rights Reserved.</p>
+    <!-- Footer -->
+    <footer class="text-center mt-10 text-gray-700 border-t-4 border-black py-4">
+        <p class="text-sm md:text-base">&copy; 2025 My Portfolio. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        let lastScroll = 0;
+        const header = document.getElementById('mainHeader');
+        const miniNav = document.getElementById('miniNav');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                // Scroll ke bawah - sembunyikan header
+                header.classList.add('header-hidden');
+            } else {
+                // Scroll ke atas - tampilkan header
+                header.classList.remove('header-hidden');
+            }
+
+            lastScroll = currentScroll;
+        });
+    </script>
 </body>
 
 </html>
