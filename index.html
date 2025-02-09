@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,26 +10,31 @@
         html {
             scroll-behavior: smooth;
         }
+
         body {
             scroll-snap-type: y mandatory;
         }
+
         header {
             position: fixed;
             top: 0;
             width: 100%;
-            height: 20vh;
+            min-height: 10vh;
             background: white;
             z-index: 1000;
             padding: 10px 0;
             border-bottom: 3px solid black;
             box-shadow: 0 4px 0 black;
         }
+
         section {
-            scroll-margin-top: 200px;
+            scroll-margin-top: 160px;
         }
+
         .container {
             padding-top: 20px;
         }
+
         .navlinks a {
             cursor: pointer;
             text-decoration: none;
@@ -40,17 +46,25 @@
             background-color: #A6FAFF;
             transition: all 0.3s ease;
         }
+
         .navlinks a:hover {
             background-color: #79F7FF;
             color: black;
             box-shadow: 4px 4px 0 black;
         }
+
+        .header-hidden {
+            transform: translateY(-60%);
+            transition: transform 0.3s ease-in-out;
+        }
+
         .neobrutalism {
             border: 3px solid black;
             border-radius: 10px;
             box-shadow: 8px 8px 0 black;
             background-color: white;
         }
+
         .card {
             border: 3px solid black;
             border-radius: 10px;
@@ -59,40 +73,56 @@
             padding: 20px;
             transition: all 0.3s ease;
         }
+
         .card:hover {
             transform: translate(-4px, -4px);
             box-shadow: 8px 8px 0 black;
         }
+
         .card-thumbnail {
             border: 3px solid black;
             border-radius: 10px;
             overflow: hidden;
         }
+
         .card-thumbnail img {
             width: 100%;
             height: auto;
             display: block;
         }
+
         .card-content {
             padding: 10px;
         }
+
         .card-content p {
             margin: 10px 0;
         }
+
         .card-content strong {
             font-weight: bold;
         }
+
         .avatar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 150px;
+            max-width: 100%;
             border: 3px solid black;
             border-radius: 50%;
             padding: 5px;
             background-color: white;
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
         }
+
         .avatar img {
-            width: 350px;
-            height: 150px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             border-radius: 50%;
-            border: 3px solid black;
         }
 
         form input,
@@ -106,22 +136,26 @@
             background-color: white;
             transition: all 0.3s ease;
         }
+
         form input:focus,
         form textarea:focus {
             outline: none;
             box-shadow: 4px 4px 0 black;
         }
+
         form button {
             background-color: black;
             color: white;
             font-weight: bold;
             cursor: pointer;
         }
+
         form button:hover {
             background-color: white;
             color: black;
             box-shadow: 4px 4px 0 black;
         }
+
         footer {
             border-top: 3px solid black;
             padding: 20px 0;
@@ -134,11 +168,18 @@
                 height: auto;
                 padding: 1rem 0;
             }
+
             section {
                 scroll-margin-top: 10px;
             }
+
             .container {
                 padding-top: 1rem;
+            }
+
+            .avatar {
+                width: 120px;
+                height: 120px;
             }
         }
     </style>
@@ -146,145 +187,161 @@
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neobrutalismcss@1.0.0/dist/neobrutalism.min.css">
 </head>
-<body class="bg-gray-100 p-0">
-    <header class="text-center mb-10">
-        <h1 class="text-4xl font-bold text-black mb-2">My Portfolio</h1>
-        <p class="text-lg text-gray-700 mb-4">Web Developer | Designer | Creator</p>
-        <nav class="mb-3">
-            <ul class="navlinks flex justify-center space-x-6">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#portofolio">Projects</a></li>
-                <li><a href="#certificates">Certificates</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <div class="p-10 mt-30">
-    <section id="about" class="container max-w-5x1 mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism flex items-center space-x-6">
-        <div class="avatar bg-pale-red">
-            <img src="images/main_photo.jpeg" alt="Avatar" />
-        </div>
-        <div>
-            <h2 class="text-2xl font-bold">About Me</h2>
-            <p class="mt-4 text-gray-600">As a dedicated undergraduate student at Universitas Wahid Hasyim, I am pursuing my Bachelor’s degree in Informatics Engineering. My passion lies in Machine Learning and Data scientist, where I continuously strive to expand my skills and contribute to meaningful projects. I possess a strong foundation in Data Analyst</p>
-            <div class="social mt-5 space-x-2">
-                <a href="https://www.facebook.com/nanda.b.r.37?mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://linkedin.com/in/nanda-ramdhan-30271828b"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/nannraa__?igsh=MThzb3J2dzY3anFjNg=="><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://github.com/MadeltAlfa"><i class="fa-brands fa-github"></i></a>
-            </div>
-        </div>
-    </section>
 
-    <section id="skills" class="container max-w-7xl mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism">
-        <h2 class="text-2xl font-bold">Skills</h2>
-        <div class="grid grid-cols-4 gap-4 mt-4">
-            <div class="card">
-                <div class="card-thumbnail">
-                    <img src="images/cpp.png" loading="lazy" alt="Explore NeoBrutalismCSS" />
-                </div>
-                <div class="card-content">
-                    <p><strong>C++: Basic</strong></p>
-                    <p>- Fundamental knowledge of C++ programming language</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-thumbnail">
-                    <img src="images/linux.png" loading="lazy" alt="Explore NeoBrutalismCSS" />
-                </div>
-                <div class="card-content">
-                    <p><strong>Linux: Basic</strong></p>
-                    <p>- Fundamental knowledge of Linux operating system</p>
-                    <p>- Experience with command line interface</p>
-                    <p>- Remask of Linux Ubuntu</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-thumbnail">
-                    <img src="images/figma.png" loading="lazy" alt="Explore NeoBrutalismCSS" />
-                </div>
-                <div class="card-content">
-                    <p><strong>Figma: Basic</strong></p>
-                    <p>- Fundamental knowledge of Figma software</p>
-                    <p>- Experience with creating user interfaces and prototypes</p>
-                </div>
-            </div>
-            <div class="card">
-                <h3>Project 2 - Portfolio website</h3>
-                <p>A personal portfolio showcasing my work.</p>
-            </div>
+<body class="bg-gray-100 p-0">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 bg-white z-50 shadow-md border-b-4 border-black py-4" id="mainHeader">
+        <div class="text-center">
+            <h1 class="text-2xl md:text-4xl font-bold text-black mb-1 md:mb-2">My Portfolio</h1>
+            <p class="text-sm md:text-lg text-gray-700 mb-2 md:mb-4">Web Developer | Junior Progammer</p>
+            <nav class="mb-2" id="mainNav">
+                <ul class="navlinks flex flex-wrap justify-center gap-2 md:gap-6 px-2">
+                    <li><a href="#about" class="text-xs md:text-base">About Me</a></li>
+                    <li><a href="#skills" class="text-xs md:text-base">Skills</a></li>
+                    <li><a href="#projects" class="text-xs md:text-base">Projects</a></li>
+                    <li><a href="#certificates" class="text-xs md:text-base">Certificates</a></li>
+                    <li><a href="#contact" class="text-xs md:text-base">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-    </section>
-    
-    <section id="portofolio" class="container max-w-7xl mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism">
-        <h2 class="text-2xl font-bold">Projects</h2>
-        <div class="grid grid-cols-4 gap-4 mt-4">
-            <div class="card">
-                <a href="https://example.com">
+    </header>
+
+    <div class="pt-36 md:pt-40 px-4 md:px-10 md:p-10">
+
+        <!-- About Section -->
+        <section id="about"
+            class="container max-w-5x1 mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism flex items-center space-x-6">
+            <div class="avatar bg-pale-red">
+                <img src="images/main_photo.jpeg" alt="Avatar" />
+            </div>
+            <div>
+                <h2 class="text-2xl font-bold">About Me</h2>
+                <p class="mt-4 text-gray-600">As a dedicated undergraduate student at Universitas Wahid Hasyim, I am
+                    pursuing my Bachelor’s degree in Informatics Engineering. My passion lies in Machine Learning and
+                    Data scientist, where I continuously strive to expand my skills and contribute to meaningful
+                    projects. I possess a strong foundation in Data Analyst</p>
+                <div class="social mt-5 space-x-2">
+                    <a href="https://www.facebook.com/nanda.b.r.37?mibextid=ZbWKwL"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://linkedin.com/in/nanda-ramdhan-30271828b"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/nannraa__?igsh=MThzb3J2dzY3anFjNg=="><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/MadeltAlfa"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="container max-w-7xl mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism">
+            <h2 class="text-2xl font-bold">Skills</h2>
+            <div class="grid grid-cols-4 gap-4 mt-4">
+                <div class="card">
                     <div class="card-thumbnail">
-                        <img src="images/Ubuntu.png" loading="lazy" alt="Explore NeoBrutalismCSS" />
+                        <img src="images/cpp.png" loading="lazy" alt="Explore NeoBrutalismCSS" />
                     </div>
                     <div class="card-content">
-                        <div class="text-small">October 8, 2023</div>
-                        <p><strong>Explore NeoBrutalismCSS: A Revolutionary library</strong></p>
-                        <p>Unveil the future of NeoBrutalism with our groundbreaking approach that will transform your life.</p>
-                        <p><strong>Learn More -></strong></p>
+                        <p><strong>C++: Basic</strong></p>
+                        <p>- Fundamental knowledge of C++ programming language</p>
                     </div>
-                </a>
-            </div>
-            <div class="card">
-                <h3>Project 2 - Portfolio website</h3>
-                <p>A personal portfolio showcasing my work.</p>
-            </div>
-            <div class="card">
-                <h3>Project 2 - Portfolio website</h3>
-                <p>A personal portfolio showcasing my work.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="certificates" class="container max-w-7xl mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism">
-        <h2 class="text-2xl font-bold">Certificates</h2>
-        <div class="grid grid-cols-2 gap-4 mt-4">
-            <div class="card">
-                <a href="https://example.com">
+                </div>
+                <div class="card">
                     <div class="card-thumbnail">
-                        <img src="images/alibabacloud.jpg" loading="lazy" alt="Explore NeoBrutalismCSS" />
+                        <img src="images/linux.png" loading="lazy" alt="Explore NeoBrutalismCSS" />
                     </div>
                     <div class="card-content">
-                        <div class="text-small">October 8, 2023</div>
-                        <p><strong>Explore NeoBrutalismCSS: A Revolutionary library</strong></p>
-                        <p>Unveil the future of NeoBrutalism with our groundbreaking approach that will transform your life.</p>
-                        <p><strong>Learn More -></strong></p>
+                        <p><strong>Linux: Basic</strong></p>
+                        <p>- Fundamental knowledge of Linux operating system</p>
+                        <p>- Experience with command line interface</p>
+                        <p>- Remask of Linux Ubuntu</p>
                     </div>
-                </a>
+                </div>
+                <div class="card">
+                    <div class="card-thumbnail">
+                        <img src="images/figma.png" loading="lazy" alt="Explore NeoBrutalismCSS" />
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Figma: Basic</strong></p>
+                        <p>- Fundamental knowledge of Figma software</p>
+                        <p>- Experience with creating user interfaces and prototypes</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Project 2 - Portfolio website</h3>
+                    <p>A personal portfolio showcasing my work.</p>
+                </div>
             </div>
-            <div class="card">
-                <h3>Certificate 2</h3>
-                <p>Details about the second certificate.</p>
+        </section>
+
+        <section id="projects" class="container max-w-7xl mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism">
+            <h2 class="text-2xl font-bold">Projects</h2>
+            <div class="grid grid-cols-4 gap-4 mt-4">
+                <div class="card">
+                    <a href="https://example.com">
+                        <div class="card-thumbnail">
+                            <img src="images/Ubuntu.png" loading="lazy" alt="Explore NeoBrutalismCSS" />
+                        </div>
+                        <div class="card-content">
+                            <div class="text-small">October 8, 2023</div>
+                            <p><strong>Explore NeoBrutalismCSS: A Revolutionary library</strong></p>
+                            <p>Unveil the future of NeoBrutalism with our groundbreaking approach that will transform
+                                your life.</p>
+                            <p><strong>Learn More -></strong></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <h3>Project 2 - Portfolio website</h3>
+                    <p>A personal portfolio showcasing my work.</p>
+                </div>
+                <div class="card">
+                    <h3>Project 2 - Portfolio website</h3>
+                    <p>A personal portfolio showcasing my work.</p>
+                </div>
             </div>
-        </div>
-    </section>
-    
-    <section id="contact" class="container max-w-7xl mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism">
-        <h2 class="text-2xl font-bold mt-0">Contact</h2>
-        <form action="mailto:nannraamdh@gmail.com" method="post" enctype="text/plain" class="mt-2">
-            <label class="block text-gray-700">Name:</label>
-            <input type="text" name="name" class="w-full p-2 mt-1">
-            
-            <label class="block text-gray-700 mt-4">Message:</label>
-            <textarea name="message" class="w-full p-2 mt-1"></textarea>
-            
-            <button type="submit" class="mt-4">Send</button>
-        </form>
-    </section>
-    
-</div>
-    
+        </section>
+
+        <section id="certificates" class="container max-w-7xl mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism">
+            <h2 class="text-2xl font-bold">Certificates</h2>
+            <div class="grid grid-cols-2 gap-4 mt-4">
+                <div class="card">
+                    <a href="https://example.com">
+                        <div class="card-thumbnail">
+                            <img src="images/alibabacloud.jpg" loading="lazy" alt="Explore NeoBrutalismCSS" />
+                        </div>
+                        <div class="card-content">
+                            <div class="text-small">October 8, 2023</div>
+                            <p><strong>Explore NeoBrutalismCSS: A Revolutionary library</strong></p>
+                            <p>Unveil the future of NeoBrutalism with our groundbreaking approach that will transform
+                                your life.</p>
+                            <p><strong>Learn More -></strong></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <h3>Certificate 2</h3>
+                    <p>Details about the second certificate.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container max-w-7xl mx-auto bg-white p-8 mt-6 rounded-lg neobrutalism">
+            <h2 class="text-2xl font-bold mt-0">Contact</h2>
+            <form action="mailto:nannraamdh@gmail.com" method="post" enctype="text/plain" class="mt-2">
+                <label class="block text-gray-700">Name:</label>
+                <input type="text" name="name" class="w-full p-2 mt-1">
+
+                <label class="block text-gray-700 mt-4">Message:</label>
+                <textarea name="message" class="w-full p-2 mt-1"></textarea>
+
+                <button type="submit" class="mt-4">Send</button>
+            </form>
+        </section>
+
+    </div>
+
     <footer class="text-center mt-10 text-gray-700">
         <p>&copy; 2025 My Portfolio. All Rights Reserved.</p>
     </footer>
 </body>
+
 </html>
