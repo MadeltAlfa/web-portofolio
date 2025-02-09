@@ -165,6 +165,11 @@ footer {
         scroll-margin-top: 40%;
     }
 
+    .header-hidden {
+        transform: translateY(-50%);
+        transition: transform 0.3s ease-in-out;
+    }
+
     .container {
         padding-top: 1rem;
     }
